@@ -76,15 +76,16 @@ html, body {
     display: block;
     max-width: 100%;
     margin-bottom: $logo-margin;
+    margin: 0 auto;
   }
 
   &>.search {
     position: relative;
 
     input {
-      background: $nav-bg;
+      background: #fff;
       border-width: 0 0 1px 0;
-      border-color: $search-box-border-color;
+      border-color: #e8e8e8;
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
       margin: $nav-v-padding $nav-padding;
@@ -159,13 +160,13 @@ html, body {
 
   // this is parent links of the currently selected ToC entry
   .toc-link.active-parent {
-    background-color: $nav-active-parent-bg;
+    background-color: #e6e6e6;
     color: $nav-active-parent-text;
   }
 
   .toc-list-h2 {
     display: none;
-    background-color: $nav-subitem-bg;
+    background-color: #e6e6e6;
     font-weight: 500;
   }
 
@@ -263,7 +264,7 @@ html, body {
   // half of the content always this background color.
   .dark-box {
     width: $examples-width;
-    background-color: $examples-bg;
+    background-color: #333;
     position: absolute;
     right: 0;
     top: 0;
@@ -273,7 +274,7 @@ html, body {
   .lang-selector {
     position: fixed;
     z-index: 50;
-    border-bottom: 5px solid $lang-select-active-bg;
+    border-bottom: 5px solid #484848;
   }
 }
 
@@ -284,20 +285,20 @@ html, body {
   a {
     display: block;
     float:left;
-    color: $lang-select-text;
+    color: #777;
     text-decoration: none;
     padding: 0 10px;
     line-height: 30px;
     outline: 0;
 
     &:active, &:focus {
-      background-color: $lang-select-pressed-bg;
-      color: $lang-select-pressed-text;
+      background-color: #484848;
+      color: #f1f1f1;
     }
 
     &.active {
-      background-color: $lang-select-active-bg;
-      color: $lang-select-active-text;
+      background-color: #484848;
+      color: #dedede;
     }
   }
 
@@ -346,14 +347,14 @@ html, body {
 
   h1 {
     @extend %header-font;
-    font-size: 25px;
+    font-size: 30px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    background-color: #fdfdfd;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    background-color: #fff;
   }
 
   h1:first-child, div:first-child + h1 {
@@ -444,6 +445,15 @@ html, body {
     margin-top: 0;
   }
 
+  p > a {
+    color: #006fe8;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   img {
     max-width: 100%;
   }
@@ -528,7 +538,7 @@ html, body {
     &>p { margin: 0; }
 
     a {
-      color: #fff;
+      color: #006fe8;
       text-decoration: none;
       border-bottom: dashed 1px #ccc;
     }
